@@ -11,7 +11,7 @@ function awsenv --argument-names sub --argument-names profile
             __awsenv_cli $profile
         case 'get'
             if set -q AWSENV_PROFILE
-                echo $AWSENV_PROFILE
+                echo $AWSENV_PROFILE[$AWSENV_PROVIDER]
             else
                 echo "<none>"
             end

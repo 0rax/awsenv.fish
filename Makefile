@@ -11,8 +11,9 @@ install:
 	install functions/__awsenv_vault.fish      $(FISH_CONFIG_PATH)/functions
 	install functions/__awsenv_cli.fish        $(FISH_CONFIG_PATH)/functions
 	install functions/__awsenv_list.fish       $(FISH_CONFIG_PATH)/functions
-	install functions/__awsenv_usage.fish       $(FISH_CONFIG_PATH)/functions
-	install functions/__flseg_awsenv.fish       $(FISH_CONFIG_PATH)/functions
+	install functions/__awsenv_usage.fish      $(FISH_CONFIG_PATH)/functions
+	install functions/__flseg_awsenv.fish      $(FISH_CONFIG_PATH)/functions
+	install functions/__flseg_awsprofile.fish  $(FISH_CONFIG_PATH)/functions
 	install -d $(FISH_CONFIG_PATH)/completions
 	install completions/awsenv.fish $(FISH_CONFIG_PATH)/completions
 
@@ -26,6 +27,7 @@ uninstall:
 	rm -f $(FISH_CONFIG_PATH)/functions/__awsenv_list.fish
 	rm -f $(FISH_CONFIG_PATH)/functions/__awsenv_usage.fish
 	rm -f $(FISH_CONFIG_PATH)/functions/__flseg_awsenv.fish
+	rm -f $(FISH_CONFIG_PATH)/functions/__flseg_awsprofile.fish
 	rm -f $(FISH_CONFIG_PATH)/completions/awsenv.fish
 
 .PHONY: all install uninstall
