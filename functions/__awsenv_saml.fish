@@ -2,7 +2,7 @@
 
 function __awsenv_saml --argument-names profile
 
-    if type -q saml2aws
+    if ! type -q saml2aws
         return 2
     else if test -z profile
         return 1

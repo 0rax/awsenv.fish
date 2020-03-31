@@ -2,7 +2,7 @@
 
 function __awsenv_vault --argument-names profile
 
-    if type -q aws-vault
+    if ! type -q aws-vault
         return 2
     else if test -z profile
         return 1
@@ -30,7 +30,7 @@ function __awsenv_vault --argument-names profile
         echo "> aws-vault was unable to generate credentials ..." 1>&2
         echo "  status: failure" 1>&2
         echo "  provider: vault" 1>&2
-        echo "  error: $error"  1>&2
+        echo "  error: $error" 1>&2
         return 1
     end
 
